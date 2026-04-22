@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Jeelu 💖</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-y: auto;
+  color: white;
+  text-align: center;
+}
+
+/* Slides */
+.slide {
+  display: none;
+  min-height: 100vh;
+  padding: 40px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.slide.active { display: block; }
+
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.slide * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Glow */
+h1 {
+  font-size: 2.5em;
+  color: #ffd1dc;
+  text-shadow: 0 0 10px #ff9eb5, 0 0 20px #ff6f91;
+}
+
+p {
+  max-width: 850px;
+  margin: auto;
+  line-height: 1.9;
+  color: #ffe4ec;
+}
+
+/* Button */
+button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: #ff6f91;
+  color: white;
+  box-shadow: 0 0 10px #ff6f91;
+}
+
+/* Confetti */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  pointer-events: none;
+}
+
+/* PERFECT HEART (SVG-like using CSS) */
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  background: pink;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+.hearts {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Falling */
+@keyframes fall {
+  0% { transform: translateY(0) rotate(45deg); opacity:1; }
+  100% { transform: translateY(100vh) rotate(45deg); opacity:0; }
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="confetti"></canvas>
+<div class="hearts"></div>
+
+<!-- Slides (same content kept short here for clarity) -->
+<div class="slide active" style="background-image:url('photo1.jpg')">
+<h1>Hey Jeelu 💖</h1>
+<p>I made something for you… something simple, something not perfect, but something that comes completely from my heart.  
+I don’t know if this will be enough or not, but I really wanted to try.  
+So just rotate your phone horizontally click below and see your surprise 🎁</p>
+<button onclick="next()">Click for Surprise 🎉</button>
+</div>
+
+<div class="slide" style="background-image:url('photo2.jpg')">
+<h1>Happy 16th Birthday 🎂</h1>
+<p>Happy 16th Birthday Jeelu 💖 Today is not just another normal day for me, because it’s the day someone truly special came into this world, someone who has become such an important part of my life. Turning 16 is such a meaningful moment, like stepping into a new phase filled with dreams, hopes, and beautiful beginnings. I still remember how you used to say that your birthdays never really felt special, that they just passed like any other normal day, and that thought stayed in my mind for a long time.  
+
+That is why this time, I really wanted to try to make a difference. Maybe I cannot create the biggest or the most perfect surprise for you right now, and I know you deserve something much more than this. I wanted to at least try, to make even a small effort that could make you feel a little more special. This may be simple, but it carries my intention, my effort, and my feelings. I just wanted you to feel that this day matters, that you matter, and that there is someone who genuinely cares about making your birthday feel different this time. And if even a small part of this makes you smile, then that means everything to me 😊✨</p>
+<button onclick="next()">Next ➡️</button>
+</div>
+
+<div class="slide" style="background-image:url('photo3.jpg')">
+<h1>You Are Special 💫</h1>
+<p>Jeelu 💕 I honestly don’t think I will ever be able to fully explain what you mean to me, because some feelings are just too deep to be put into words. You are not just my best friend, you are someone who has become a very important part of my life in a way that is hard to describe. You understand me in ways that most people don’t, and that is something very rare and very special.  
+
+There have been so many moments where just talking to you made everything feel lighter, where your presence alone made things better without you even realizing it. You have this natural way of bringing comfort, peace, and happiness to people around you. Your smile, your nature, your honesty, and the way you stay real—these are the things that make you truly different from everyone else.  
+
+I feel lucky to have you in my life, not just because you are my best friend, but because you are someone I can trust, respect, and genuinely care about. And I really hope that no matter where life takes you, you always remember how special you are, because you truly are one of a kind 🤗💖</p>
+<button onclick="next()">Next ➡️</button>
+</div>
+
+<div class="slide" style="background-image:url('photo4.jpg')">
+<h1>My Effort 💝</h1>
+<p>I know this is not a huge or perfect surprise, and I know very well that you deserve something much greater than this. But still, I didn’t want your birthday to feel like just another normal day this time. I wanted to do something, even if it’s small, just to make you feel that you are special and that your birthday actually matters.  
+
+I spent time thinking about what I could do, what I could create that would feel meaningful and not just like a simple message. And this is what I came up with. It may not be big, it may not be perfect, but it carries my effort, my time, and my genuine feelings. I tried to create something that you could feel, not just see.  
+
+Even if this is small compared to what you truly deserve, I still hope that when you see this, you understand that I tried, not because I had to, but because I wanted to. Because you matter to me, and your happiness matters to me 💕
+</p>
+<button onclick="next()">Next ➡️</button>
+</div>
+
+<div class="slide" style="background-image:url('photo5.jpg')">
+<h1>Your Smile 😊</h1>
+<p>Your happiness truly means a lot to me. I just want you to always stay happy, not just today, but every single day ahead. You deserve a life filled with genuine smiles, positivity, and beautiful moments. You deserve people who truly understand you, respect you, and make you feel valued.  
+
+There is something about seeing you happy that makes everything feel right. Even a small smile from you has the power to make things better, and that is why I always wish for your happiness, even in the smallest ways. Life will have ups and downs, but I truly hope that no matter what happens, you always find reasons to smile and stay strong.  
+
+And if I can ever be even a small reason behind your smile, even for a moment, that would honestly mean everything to me 😊💫
+</p>
+<button onclick="next()">Next ➡️</button>
+</div>
+
+<div class="slide" style="background-image:url('photo1.jpg')">
+<h1>Thank You 💖</h1>
+<p>Jeelu 💖 I just want to say thank you… for everything. Thank you for being in my life, for being real, for being someone I can trust and someone who understands me without needing too many words. You have made my life better in ways that I don’t always express, and that is something I truly appreciate from my heart.  
+
+All the memories we have shared, all the conversations, the laughs, the random moments—everything means so much to me. These are not just moments, they are memories that I will always keep with me. You are not just someone important, you are someone irreplaceable in my life.  
+
+I really wanted this birthday to feel different for you, even if it’s in a simple way. Once again, Happy 16th Birthday Jeelu 🎉🎂💖 I hope this day becomes a memory that stays in your heart and reminds you how special you truly are, today and always</p>
+<button onclick="restart()">Restart 🔄</button>
+</div>
+
+<script>
+let current=0;
+const slides=document.querySelectorAll(".slide");
+
+function next(){
+  slides[current].classList.remove("active");
+  current++;
+  slides[current].classList.add("active");
+  window.scrollTo(0,0);
+}
+
+function restart(){
+  slides[current].classList.remove("active");
+  current=0;
+  slides[current].classList.add("active");
+}
+
+/* EVEN CONFETTI DISTRIBUTION */
+const canvas=document.getElementById("confetti");
+const ctx=canvas.getContext("2d");
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let confetti=[];
+let count=60;
+
+for(let i=0;i<count;i++){
+  confetti.push({
+    x:(i/count)*canvas.width, // evenly spread
+    y:Math.random()*canvas.height,
+    r:Math.random()*4+2,
+    d:Math.random()*2+1,
+    color:`hsl(${Math.random()*360},100%,60%)`
+  });
+}
+
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  confetti.forEach(c=>{
+    ctx.fillStyle=c.color;
+    ctx.beginPath();
+    ctx.arc(c.x,c.y,c.r,0,Math.PI*2);
+    ctx.fill();
+    c.y+=c.d;
+    if(c.y>canvas.height){
+      c.y=0;
+    }
+  });
+}
+setInterval(draw,30);
+
+/* BALANCED HEART FALL */
+setInterval(()=>{
+  let h=document.createElement("div");
+  h.className="heart";
+  h.style.left=Math.random()*100+"vw"; // balanced
+  h.style.top="-20px";
+  h.style.animation="fall 5s linear";
+  document.querySelector(".hearts").appendChild(h);
+  setTimeout(()=>h.remove(),5000);
+},500);
+</script>
+
+</body>
+</html>
